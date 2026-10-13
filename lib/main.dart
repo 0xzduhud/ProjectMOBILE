@@ -1,10 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 import 'core/app_theme.dart';
 import 'navigation/app_router.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  await Supabase.initialize(
+    url: 'https://tuscdrrewzvgocasnhza.supabase.co',
+    publishableKey: 'sb_publishable_O9_5AJ_sz4ySLm4dV5MPBw_A1Jy5VW8',
+  );
+
   runApp(const GerakInApp());
 }
 
