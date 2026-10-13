@@ -9,21 +9,21 @@ class HistoryPage extends StatelessWidget {
       appBar: AppBar(title: const Text('Riwayat Aktivitas')),
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(24),
+          padding: const EdgeInsets.all(28),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(Icons.history, size: 80, color: Colors.green.shade700),
+              Icon(Icons.history, size: 76, color: Colors.grey.shade400),
               const SizedBox(height: 16),
               const Text(
                 'Belum Ada Riwayat',
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 21, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 8),
-              const Text(
-                'Aktivitas olahraga yang kamu catat '
-                'akan ditampilkan di sini.',
+              Text(
+                'Aktivitas workout yang selesai akan muncul di sini.',
                 textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.grey.shade600),
               ),
             ],
           ),
