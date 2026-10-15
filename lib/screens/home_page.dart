@@ -4,6 +4,8 @@ import 'workout_page.dart';
 import 'history_page.dart';
 import 'profile_page.dart';
 
+import 'activity_page.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -170,9 +172,11 @@ class HomeDashboard extends StatelessWidget {
                 icon: Icons.auto_graph,
                 title: 'Aktivitas',
                 subtitle: 'Pantau progres',
+
                 onTap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(builder: (_) => const HistoryPage()),
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (_) => const ActivityPage()),
                   );
                 },
               ),
